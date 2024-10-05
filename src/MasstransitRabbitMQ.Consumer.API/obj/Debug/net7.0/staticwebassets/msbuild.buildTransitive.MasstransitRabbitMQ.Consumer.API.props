@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\MasstransitRabbitMQ.Consumer.API.props" />
+</Project>

@@ -1,0 +1,26 @@
+2024-10-05 13:31:53.418 +07:00 [INF] Configured endpoint SendEmailWhenReceivedSmsEvent, Consumer: MasstransitRabbitMQ.Consumer.API.MessageBus.Cosumers.Events.SendEmailWhenReceivedSmsEventConsumer
+2024-10-05 13:31:53.478 +07:00 [INF] Configured endpoint SendSmsWhenReceivedSmsEvent, Consumer: MasstransitRabbitMQ.Consumer.API.MessageBus.Cosumers.Events.SendSmsWhenReceivedSmsEventConsumer
+2024-10-05 13:31:53.658 +07:00 [DBG] Starting bus instances: IBus
+2024-10-05 13:31:53.663 +07:00 [DBG] Starting bus: "rabbitmq://localhost/thanhthai1608"
+2024-10-05 13:31:53.793 +07:00 [DBG] Connect: guest@localhost:5672/thanhthai1608
+2024-10-05 13:31:54.006 +07:00 [DBG] Connected: guest@localhost:5672/thanhthai1608 (address: amqp://localhost:5672, local: 51176)
+2024-10-05 13:31:54.076 +07:00 [DBG] Endpoint Ready: "rabbitmq://localhost/thanhthai1608/DESKTOP6NHT7M2_MasstransitRab_bus_5bmoyyrawerjq9ttbdqqkb5ggs?temporary=true"
+2024-10-05 13:31:54.106 +07:00 [DBG] Declare queue: name: SendSmsWhenReceivedSmsEvent, durable, consumer-count: 0 message-count: 0
+2024-10-05 13:31:54.106 +07:00 [DBG] Declare queue: name: SendEmailWhenReceivedSmsEvent, durable, consumer-count: 0 message-count: 0
+2024-10-05 13:31:54.120 +07:00 [DBG] Declare exchange: name: SendSmsWhenReceivedSmsEvent, type: fanout, durable
+2024-10-05 13:31:54.120 +07:00 [DBG] Declare exchange: name: SendEmailWhenReceivedSmsEvent, type: fanout, durable
+2024-10-05 13:31:54.126 +07:00 [DBG] Declare exchange: name: MasstransitRabbitMQ.Contract.IntergrationEvents:DomainEvent-SmsNotifycationEvent, type: fanout, durable
+2024-10-05 13:31:54.126 +07:00 [DBG] Declare exchange: name: MasstransitRabbitMQ.Contract.IntergrationEvents:DomainEvent-EmailNotifycation, type: fanout, durable
+2024-10-05 13:31:54.134 +07:00 [DBG] Bind queue: source: SendEmailWhenReceivedSmsEvent, destination: SendEmailWhenReceivedSmsEvent
+2024-10-05 13:31:54.134 +07:00 [DBG] Bind queue: source: SendSmsWhenReceivedSmsEvent, destination: SendSmsWhenReceivedSmsEvent
+2024-10-05 13:31:54.169 +07:00 [DBG] Bind exchange: source: MasstransitRabbitMQ.Contract.IntergrationEvents:DomainEvent-EmailNotifycation, destination: SendEmailWhenReceivedSmsEvent
+2024-10-05 13:31:54.169 +07:00 [DBG] Bind exchange: source: MasstransitRabbitMQ.Contract.IntergrationEvents:DomainEvent-SmsNotifycationEvent, destination: SendSmsWhenReceivedSmsEvent
+2024-10-05 13:31:54.251 +07:00 [DBG] Consumer Ok: "rabbitmq://localhost/thanhthai1608/SendSmsWhenReceivedSmsEvent" - amq.ctag-hJ2Z9HJQ_wFSPnfIAV3igw
+2024-10-05 13:31:54.251 +07:00 [DBG] Consumer Ok: "rabbitmq://localhost/thanhthai1608/SendEmailWhenReceivedSmsEvent" - amq.ctag-OQYYz3q2YaceEqcDzGO3Tw
+2024-10-05 13:31:54.253 +07:00 [DBG] Endpoint Ready: "rabbitmq://localhost/thanhthai1608/SendSmsWhenReceivedSmsEvent"
+2024-10-05 13:31:54.253 +07:00 [DBG] Endpoint Ready: "rabbitmq://localhost/thanhthai1608/SendEmailWhenReceivedSmsEvent"
+2024-10-05 13:31:54.257 +07:00 [INF] Bus started: "rabbitmq://localhost/thanhthai1608"
+2024-10-05 13:33:08.456 +07:00 [INF] Message received: SmsNotifycationEvent { Name = Sms notifycation, Description = Sms Description, Type = sms, TransactionId = d39ecd3e-e2b6-4759-a28d-9e60e611b996, Id = be2d9f35-9f02-4111-8ff6-7f1a9a7d1e0c, TimeStamp = 10/5/2024 1:33:04 PM +07:00 }
+2024-10-05 13:33:08.472 +07:00 [DBG] RECEIVE "rabbitmq://localhost/thanhthai1608/SendSmsWhenReceivedSmsEvent" "545e0000-98a2-0897-3d1f-08dce507917e" MasstransitRabbitMQ.Contract.IntergrationEvents.DomainEvent+SmsNotifycationEvent MasstransitRabbitMQ.Consumer.API.MessageBus.Cosumers.Events.SendSmsWhenReceivedSmsEventConsumer("00:00:03.3913677")
+2024-10-05 13:33:55.945 +07:00 [INF] Message received: SmsNotifycationEvent { Name = Sms notifycation, Description = Sms Description, Type = sms, TransactionId = 8535013c-4487-41d8-95ef-4c85e8d9ebef, Id = 9789d9b9-d253-4c36-9b65-fad26a9b79f7, TimeStamp = 10/5/2024 1:33:41 PM +07:00 }
+2024-10-05 13:33:55.946 +07:00 [DBG] RECEIVE "rabbitmq://localhost/thanhthai1608/SendSmsWhenReceivedSmsEvent" "545e0000-98a2-0897-6485-08dce507a763" MasstransitRabbitMQ.Contract.IntergrationEvents.DomainEvent+SmsNotifycationEvent MasstransitRabbitMQ.Consumer.API.MessageBus.Cosumers.Events.SendSmsWhenReceivedSmsEventConsumer("00:00:14.3789808")
